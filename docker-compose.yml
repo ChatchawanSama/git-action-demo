@@ -3,5 +3,7 @@ services:
     image: chatchawansama/git-action-demo:latest
     container_name: fusic-container-demo
     restart: unless-stopped
-    env_file:
-      - .env
+
+networks:
+  app:
+    external: true
