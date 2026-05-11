@@ -2,7 +2,10 @@ module github.com/ChatchawanSama/git-action-demo
 
 go 1.25.1
 
-require github.com/labstack/echo/v4 v4.15.2
+require (
+	github.com/joho/godotenv v1.5.1
+	github.com/labstack/echo/v4 v4.15.2
+)
 
 require (
 	github.com/labstack/gommon v0.5.0 // indirect
