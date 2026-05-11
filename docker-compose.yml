@@ -1,8 +1,10 @@
 services:
-  tuya-api:
+  fusic-api:
     image: chatchawansama/git-action-demo:latest
     container_name: fusic-container-demo
     restart: unless-stopped
+    networks:
+      - app
 
 networks:
   app:
