@@ -1,5 +1,5 @@
 services:
   tuya-api:
     image: ${DOCKER_IMAGE}:latest
-    container_name: demo-deploy-api
+    container_name: fusic-container-demo
     restart: unless-stopped
