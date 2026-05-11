@@ -9,14 +9,16 @@ import (
 )
 
 func main() {
-	// โหลด .env
-	err := godotenv.Load()
-	if err != nil {
-		panic("Error loading .env file")
-	}
+	// โหลด .env ถ้ามี
+	_ = godotenv.Load()
 
-	// ดึง PORT จาก .env
+	// ดึง PORT จาก ENV
 	port := os.Getenv("PORT")
+
+	// default port
+	if port == "" {
+		port = "8080"
+	}
 
 	e := echo.New()
 
